@@ -1,15 +1,6 @@
-/**
-* Template Name: Knight
-* Template URL: https://bootstrapmade.com/knight-free-bootstrap-theme/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
+
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -22,7 +13,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #555555; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #151515; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #7cc576; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #292ea3; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,11 +21,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: rgba(255, 255, 255, 0.605);  /* The default color of the main navmenu links */
-  --nav-hover-color: #7cc576; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #e91f25; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #555555; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #7cc576; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #e91f25; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -87,69 +78,18 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
 
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(0, 0, 0, 0);
+  --background-color: rgba(0, 0, 0, 0.8);
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
-  transition: all 0.5s;
   z-index: 997;
 }
 
@@ -203,11 +143,7 @@ h6 {
   }
 }
 
-/* Global Header on Scroll
-------------------------------*/
-.scrolled .header {
-  --background-color: rgba(0, 0, 0, 0.8);
-}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -885,7 +821,7 @@ section,
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.9) 75%);
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.9) 75%); */
   z-index: 2;
 }
 
@@ -917,7 +853,7 @@ section,
 }
 
 .featured-services .card .card-body h3 a {
-  color: var(--contrast-color);
+  color: var(--color);
 }
 
 .featured-services .card .card-body .card-content {
@@ -933,13 +869,135 @@ section,
   padding-top: 10px;
   margin-bottom: 0;
   overflow: hidden;
-  color: var(--contrast-color);
+  color: var(--color);
 }
 
 .featured-services .card:hover .card-content {
   grid-template-rows: 1fr;
   visibility: visible;
   opacity: 1;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.data-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 20.75em;
+  min-height: 20.75em;
+  overflow: hidden;
+  border-radius: .5em;
+  text-decoration: none;
+  background: white;
+  margin: 1em;
+  padding: 2.75em 2.5em;
+  box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+  transition: transform .45s ease;
+  
+  h3 {
+    color: var(--nav-hover-color);
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: .5em;
+    margin: 0 0 0.142857143em;
+    border-bottom: 2px solid var(--nav-hover-color);
+    transition: color .45s ease, border .45s ease;
+  }
+
+  h4 {
+    color: #627084;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin: 0 0 1.777777778em;
+    transition: color .45s ease;
+  }
+
+  p {
+    opacity: 1;
+    color: #000;
+    font-weight: 600;
+    line-height: 1.8;
+    margin: 0 0 1.25em;
+    transform: translateY(-1em);
+    transition: opacity .45s ease, transform .5s ease;
+  }
+
+  .bulletin-info {
+    color: var(--accent-color);
+  }
+
+  .bulletin-time {
+    color: var(--nav-hover-color);
+  }
+
+  .link-text {
+    display: block;
+    color: var(--nav-hover-color);
+    font-size: 1.125em;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: auto 0 0;
+    transition: color .45s ease;
+
+    svg {
+      margin-left: .5em;
+      transition: transform .6s ease;
+      
+      path {
+        transition: fill .45s ease;
+      }
+    }
+  }
+  
+  &:hover {
+    background: var(--accent-color);
+    transform: scale(1.02);
+    
+    h3 {
+      color: #FFFFFF;
+      border-bottom-color: var(--nav-hover-color);
+    }
+
+    h4 {
+      color: #FFFFFF;
+    }
+
+    p {
+      opacity: 1;
+      color: #fff;
+      transform: none;
+    }
+
+    .link-text {
+      color: #FFFFFF;
+
+      svg {
+        animation: point 1.25s infinite alternate;
+        
+        path {
+          fill: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+
+@keyframes point {
+  0% {
+   transform: translateX(0);
+  }
+  100% {
+    transform: translateX(.125em);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1403,20 +1461,20 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Faq Section
+# Facilities Section
 --------------------------------------------------------------*/
-.faq .faq-container .faq-item {
+.facilities .facilities-container .facilities-item {
   position: relative;
   padding: 20px 0;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   overflow: hidden;
 }
 
-.faq .faq-container .faq-item:last-child {
+.facilities .facilities-container .facilities-item:last-child {
   margin-bottom: 0;
 }
 
-.faq .faq-container .faq-item h3 {
+.facilities .facilities-container .facilities-item h3 {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -1427,16 +1485,16 @@ section,
   align-items: center;
 }
 
-.faq .faq-container .faq-item h3 .num {
+.facilities .facilities-container .facilities-item h3 .num {
   color: var(--accent-color);
   padding-right: 5px;
 }
 
-.faq .faq-container .faq-item h3:hover {
+.facilities .facilities-container .facilities-item h3:hover {
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-item .faq-content {
+.facilities .facilities-container .facilities-item .facilities-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: 0.3s ease-in-out;
@@ -1444,12 +1502,12 @@ section,
   opacity: 0;
 }
 
-.faq .faq-container .faq-item .faq-content p {
+.facilities .facilities-container .facilities-item .facilities-content p {
   margin-bottom: 0;
   overflow: hidden;
 }
 
-.faq .faq-container .faq-item .faq-toggle {
+.facilities .facilities-container .facilities-item .facilities-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1459,22 +1517,22 @@ section,
   cursor: pointer;
 }
 
-.faq .faq-container .faq-item .faq-toggle:hover {
+.facilities .facilities-container .facilities-item .facilities-toggle:hover {
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-active h3 {
+.facilities .facilities-container .facilities-active h3 {
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-active .faq-content {
+.facilities .facilities-container .facilities-active .facilities-content {
   grid-template-rows: 1fr;
   visibility: visible;
   opacity: 1;
   padding-top: 10px;
 }
 
-.faq .faq-container .faq-active .faq-toggle {
+.facilities .facilities-container .facilities-active .facilities-toggle {
   transform: rotate(90deg);
   color: var(--accent-color);
 }
