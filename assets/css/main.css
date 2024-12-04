@@ -525,19 +525,19 @@ h6 {
   margin-bottom: 5px;
 }
 
-.footer .copyright {
-  padding: 25px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
 
-.footer .copyright p {
-  margin-bottom: 0;
-}
+
+
 
 .footer .credits {
   margin-top: 6px;
   font-size: 13px;
 }
+
+#copywrite {
+  padding-top: 15px;
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
