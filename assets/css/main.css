@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
 
 
+
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -478,10 +479,12 @@ h6 {
 }
 
 .footer .footer-links {
+  padding-top: 45px;
   margin-bottom: 30px;
 }
 
 .footer .footer-links ul {
+  
   list-style: none;
   padding: 0;
   margin: 0;
@@ -535,7 +538,7 @@ h6 {
 }
 
 #copywrite {
-  padding-top: 15px;
+  margin: 90px;
 }
 
 
@@ -1338,7 +1341,7 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
 
 #contact {
   margin: 0;
